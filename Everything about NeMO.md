@@ -235,3 +235,5 @@ The layout of dataset collections (how they appear when viewed in the "Gene Expr
 ---
 
 ### 7. Further analysis using additional NeMO analytic features
+
+7.1 Gene List 
