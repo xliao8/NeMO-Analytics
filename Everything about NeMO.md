@@ -221,10 +221,10 @@ Clicking the plus (+) icon will prompt you to view all the displays created by y
 
 6.4 View and arrange the collection
 
-The layout of dataset collections (how they appear when viewed in the "Gene Expression Viewer") can be customized in the Dataset Explorer under "Collection View".
+The layout of dataset collections (how they appear when viewed in the "Gene Expression Viewer") can be customized in the Dataset Explorer under "Collection arrangement view".
 
 - In the "Dataset Explorer, select a collection: use the "Collection Management" dropdown to choose the dataset collection you want to edit. (Note: You can only modify collections you own. However, you may duplicate shared collections and then customize them as you wish). 
-- Go to the "collection arrangement view" by clicking the last icon among the view selection. If you do not have editing permissions for the collection, this button will not appear.
+- Go to the "Collection arrangement view" by clicking the last icon among the view selection. If you do not have editing permissions for the collection, this button will not appear.
 - Rearrange datasets by following the instructions. 
     - Drag and drop panels to change their order and position.
     - Resize panels by adjusting their width and height to make them larger, smaller, wider, or narrower.
