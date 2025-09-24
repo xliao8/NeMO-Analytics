@@ -237,3 +237,7 @@ The layout of dataset collections (how they appear when viewed in the "Gene Expr
 ### 7. Further analysis using additional NeMO analytic features
 
 7.1 Gene List 
+
+7.2 Multi-gene viewer
+
+7.3 Comparison tool
