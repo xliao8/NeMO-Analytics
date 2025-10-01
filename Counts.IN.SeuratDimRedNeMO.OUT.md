@@ -2,8 +2,8 @@
 
   This document explains how to prepare inputs and run the **NeMO function** (`Counts.IN.SeuratDimRedNeMO.OUT.R`).  
 
-  In other words, unlike **NeMO.TRIM function** (`Counts.IN.SeuratDimRedNeMO.OUT.TRIM.R`), which assumes your expression matrix is already processed and formatted, and requires you to prepare the input matrices ahead, this function is more flexible:
-  - It can accept raw counts or normalized expression matrices.
+  Unlike **NeMO.TRIM function** (`Counts.IN.SeuratDimRedNeMO.OUT.TRIM.R`), which assumes your expression matrix is already processed and formatted, and requires you to prepare the input matrices ahead, this function is more flexible:
+  - It can accept raw counts or non-normalized expression matrices.
   - It optionally applies normalization (Log2CPM), dimensionality reduction (t-SNE, UMAP), and dataset integration via Seurat.
   - It can perform startified random downsampling for handling large datasets. 
   - Finally, it produces `NeMOAnalytics.org`-compatible outputs (.xlsx metadata and .tar.gz data archive)
