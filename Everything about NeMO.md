@@ -236,7 +236,56 @@ The layout of dataset collections (how they appear when viewed in the "Gene Expr
 
 ### 7. Further analysis using additional NeMO analytic features
 
-7.1 Gene List 
+7.1 Gene List
+
+*7.1.1 Gene List Manager Overview*
+
+The Gene List Manager in NeMO allows you to create, store, and organize user-defined sets of genes. To begin creating a gene list, first open the gene list manager by clicking the "Gene List" tab in the navigation panel. The Gene List Manager follows a similar layout as the dataset explorer, where you can search for other public or private gene lists, enabling easier access and comparison across multiple analyses. Instead of retyping gene names each time, you can save them into lists, quickly reuse them in different tools, and share them with collaborators.
+
+<img width="1374" height="648" alt="image" src="https://github.com/user-attachments/assets/f074ed15-aa64-4c4e-924e-474c84129777" />
+
+1. Navigation & Access
+ - The Gene Lists section is found under the Manage menu on the left sidebar.
+- From here, you can access all your lists, lists shared with you, group-affiliated lists, or public lists.
+- Lists can also be filtered by organism (e.g., human, mouse, zebrafish) and by date added.
+
+2. Views
+- At the top of the page, you can toggle between List View, Table View, and Expanded View.
+- These views control how gene lists are displayed, ranging from compact overviews to detailed expanded records.
+- Lists can be sorted by metadata such as date created. This is useful for finding your most recent lists quickly.
+
+3. Core Functions for Each Gene List
+Each entry in the "Gene list manager" represents a single gene list, showing its name, organism, owner, type, description, and added date. In the expanded gene list view entry, there are several action icons allow you to manage the list:
+- Projection Tool (eye icon) → Opens the list in NeMO’s projection tool for quick comparison across studies (will be covered in later sections) 
+- Download (down arrow icon) → Exports the list for offline use or backup.
+- Delete (trash icon) → Permanently removes the list. 
+- Shareable Link (link icon) → Generates a link to share the gene list with collaborators.
+- Edit Link (pencil/edit icon) → Allows you to modify the sharing settings.
+- Edit Metadata (page/edit icon) → Update metadata like the gene list’s description or category.
+
+4. Clicking on the "+ Create new gene list" will lead you to the following page to set up your new gene list.  There are two types of gene lists NeMO users can create: unweighted and weighted. This tutorial 
+There are two types of gene lists NeMO users can create: "unweighted gene list"(the most common type, just gene symbols), or "weighted gene list" (e.g., PCA loadings, differential gene statistics, etc.). We will cover how to create/upload them and use them, along with other NeMO analytic tools, in the next few sections.
+
+<img width="1374" height="648" alt="image" src="https://github.com/user-attachments/assets/d00daad8-a2d0-4039-831d-d183055be73c" />
+
+------
+
+*7.1.2 Create unweighted gene list" 
+
+<img width="1374" height="648" alt="image" src="https://github.com/user-attachments/assets/36c55d62-eb9c-4691-9ba4-b66839994c6f" />
+<img width="1374" height="648" alt="image" src="https://github.com/user-attachments/assets/c8f0c1bb-db8c-4fce-b16d-0c47ce30bdf4" />
+
+<img width="803" height="616" alt="image" src="https://github.com/user-attachments/assets/060108a5-138c-4aad-a404-66f3af387cb2" />
+
+-----
+
+*7.1.3 Create weighted gene list" 
+
+<img width="1374" height="648" alt="image" src="https://github.com/user-attachments/assets/5fbefd4e-a60e-463c-8f5c-a0e0cc057467" />
+<img width="608" height="651" alt="image" src="https://github.com/user-attachments/assets/0d52e3f6-bb3b-4292-ad52-616a2515f3a8" />
+
+*7.1.4 Upload weighted gene list from Comparison tool* 
+
 
 7.2 Multi-gene viewer
 
