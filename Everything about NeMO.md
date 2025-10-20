@@ -317,6 +317,15 @@ Different from uploading the unweighted gene list file, the weighted gene list f
 
 **7.2 Multi-gene viewer**
 
+*7.2.1 Create multi-gene display*
+
+Similar to the single-gene viewer, we can create different visualization panels for examining different groups of genes  
+<img width="957" height="486" alt="image" src="https://github.com/user-attachments/assets/33fc760b-f4cb-423e-9503-577e6a758e47" />
+
+
+*7.2.2 View expression of genes saved in the weighted/unweighted genes 
+
+
 
 -----
 
@@ -396,4 +405,7 @@ Once the plots are generated, users can interact with the plots for better visua
 <img width="1125" height="650" alt="image" src="https://github.com/user-attachments/assets/16b5a5a6-5754-488c-a9b2-31eb3197b891" />
 <img width="1123" height="378" alt="image" src="https://github.com/user-attachments/assets/180812b8-4cf8-4da5-ad25-5ec35f68df43" />
 
+----
+
+***7.4 Projection tool***
 
