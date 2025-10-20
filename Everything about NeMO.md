@@ -319,12 +319,68 @@ Different from uploading the unweighted gene list file, the weighted gene list f
 
 *7.2.1 Create multi-gene display*
 
-Similar to the single-gene viewer, we can create different visualization panels for examining different groups of genes  
+Similar to the single-gene viewer, we can create different visualization panels for examining different groups of genes. The Multi-gene Display Tool allows users to visualize the expression of multiple genes simultaneously across defined biological or experimental conditions.
+This function is ideal for comparing patterns of co-expression, examining pathway gene sets, or exploring marker profiles across disease, cell type, or genotype.
+
+The multi-gene curator can be lanched from the dataset management page under the analysis tool of each expanded dataset entry. Clicking on the "multi-gene curator" button will lead the user to the "multi-gene display page" and the selected dataset will be automatically populated in the "select a dataset" entry. Alternatively, multi-gene curator can be lanched using the navigation panel on the left. Using the drop down and search button under "select a dataset" entry, users can manually select their dataset of interests. 
+
 <img width="957" height="486" alt="image" src="https://github.com/user-attachments/assets/33fc760b-f4cb-423e-9503-577e6a758e47" />
+<img width="1081" height="563" alt="image" src="https://github.com/user-attachments/assets/78713cb8-ce4c-4915-a903-f401da328cc6" />
+
+Follow the prompt 2-5 in the " multi-gene display" page to customize the visualization for viewing multiple genes:
+- Create or load an existing display
+  - Click + Curate new display to start a new visualization, or select a saved display from your existing list
+    - You can also Clone or Set as Default any previously created display for reuse
+- Select plot type and analysis: these defines how the gene expression data will be displayed and aggregated 
+    - Add the genes you wish to visualize
+    - Enter gene names manually into the search box, or use Quick search using Gene Lists to import a saved list.
+    - As you type, the system will auto-suggest matching genes present in the dataset.
+    - For multi-gene plots, at least two genes are required to create the plot template. Upon completion, the plot schematics can be applied to alternative genes or saved gene list when using the multi-gene display search tools. 
+- Select plotting options: customize how your data will be grouped and displayed.
+    - Primary grouping: choose the main variable for comparison (e.g., patho_diagnosis for AD vs. Control).
+    - Secondary grouping (optional): add a secondary grouping factor if desired (e.g., cell type, genotype).
+    - Add clusterbar groups: check boxes to add cluster bars (e.g., apoe_genotype, study, subset).
+    - When all selections are complete, click "Plot" to generate your heatmap or matrix plot.
+
+Clicking on the "plot" button will lead the user to the preview section, where plotting parameters can be further adjusted using the options listed on the left configuration panel. This page allows you to fine-tune the visualization and save it as a curated display. Once users are satisfied with the visualization, they can save the display and download it to their own device. 
+
+<img width="939" height="533" alt="image" src="https://github.com/user-attachments/assets/70dc2e1b-6992-45c4-8999-0ed0f20322d7" />
+
+----
+
+*7.2.2 Add the multi-gene display to a collection* 
+
+As discussed in "6. Create dataset collections",  single-gene display can be added to curated collection for cross-dataset comparison. Multi-gene displays can also be added and arranged in the existing collection or new collection in the same way. To do so, first navigating back to the "dataset management page. 
+
+- Under Collection management, use the dropdown to:
+    - Select an existing collection, or
+    - Click + Create a new collection, then give it a name
+    - Optionally, check Private collection if you don’t want it shared publicly.
+
+<img width="1242" height="711" alt="image" src="https://github.com/user-attachments/assets/e7277f4d-f2ee-4eec-b53f-b79463d02938" />
+
+- Add the dataset containing your multi-gene display
+    - Scroll through the dataset list (or use the keyword search/filter panel) to find the target dataset
+    - Expand the dataset entry and use the "+/-" button to add or remove the display from the collection
+<img width="1202" height="706" alt="image" src="https://github.com/user-attachments/assets/173b926f-989b-45d5-9e36-73630d030a3d" />
 
 
-*7.2.2 View expression of genes saved in the weighted/unweighted genes 
+- Clicking on the "+/-" button will pop up a preview window to allow you add or remove displays for this specific dataset
+<img width="1232" height="326" alt="image" src="https://github.com/user-attachments/assets/6753c823-99bd-40a9-921c-3d5d0ce2cc9d" />
 
+----
+
+*7.2.3 View expression of genes saved in the weighted/unweighted genes*
+
+Once displays are added in the collection. The multi-gene viewer function for this collection will be activated in the "Gene Expression" page. Go to the "Gene Expression" tab using the navigation panel on the left. 
+
+- Select the collection that you added your multi-gene display using the drop-down menu
+- Type in the names of the genes or use the drop-down menu to select saved gene list
+  - Click to confirm the genes from the list
+  - Confirm the query by clicking on proceed
+- Run the query by clicking on the "magnifier" button from the top
+
+<img width="1223" height="622" alt="image" src="https://github.com/user-attachments/assets/08006076-2ef1-4583-8d15-31006620e9bf" />
 
 
 -----
