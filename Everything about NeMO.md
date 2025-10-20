@@ -512,6 +512,7 @@ Within NeMO, projection is seamlessly integrated with your existing datasets and
   
   <img width="1285" height="651" alt="image" src="https://github.com/user-attachments/assets/dd67dcdd-b638-4aeb-b6ec-2a9e40729707" />
 
+----
 
 ### 8. Reference
 1. Shreyash Sonthalia, Ricky S. Adkins, Joshua Orvis, Guangyan Li, Xoel Mato Blanco, Alex Casella, Jinrui Liu, Genevieve Stein-O’Brien, Brian Caffo, Ronna Hertzano, Anup Mahurkar, Jesse Gillis, Jonathan Werner, Shaojie Ma, Nicola Micali, Nenad Sestan, Pasko Rakic, Gabriel Santpere, Seth A. Ament, Carlo Colantuoni.
