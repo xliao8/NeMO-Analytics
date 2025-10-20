@@ -330,7 +330,7 @@ The multi-gene curator can be lanched from the dataset management page under the
 Follow the prompt 2-5 in the " multi-gene display" page to customize the visualization for viewing multiple genes:
 - Create or load an existing display
   - Click + Curate new display to start a new visualization, or select a saved display from your existing list
-    - You can also Clone or Set as Default any previously created display for reuse
+  - You can also Clone or Set as Default any previously created display for reuse
 - Select plot type and analysis: these defines how the gene expression data will be displayed and aggregated 
     - Add the genes you wish to visualize
     - Enter gene names manually into the search box, or use Quick search using Gene Lists to import a saved list.
@@ -372,7 +372,7 @@ As discussed in "6. Create dataset collections",  single-gene display can be add
 
 *7.2.3 View expression of genes saved in the weighted/unweighted genes*
 
-Once displays are added in the collection. The multi-gene viewer function for this collection will be activated in the "Gene Expression" page. Go to the "Gene Expression" tab using the navigation panel on the left. 
+Once displays are added in the collection, the multi-gene viewer function for this collection will be activated in the "Gene Expression" page. Go to the "Gene Expression" tab using the navigation panel on the left. 
 
 - Select the collection that you added your multi-gene display using the drop-down menu
 - Type in the names of the genes or use the drop-down menu to select saved gene list
@@ -380,10 +380,9 @@ Once displays are added in the collection. The multi-gene viewer function for th
   - Confirm the query by clicking on proceed
 - Run the query by clicking on the "magnifier" button from the top
 
-<img width="1223" height="622" alt="image" src="https://github.com/user-attachments/assets/08006076-2ef1-4583-8d15-31006620e9bf" />
+<img width="1239" height="615" alt="image" src="https://github.com/user-attachments/assets/050e5897-d67c-4e59-afe5-fc7bb0359eb3" />
 
-
------
+----
 
 **7.3 Comparison tool**
 
@@ -463,5 +462,66 @@ Once the plots are generated, users can interact with the plots for better visua
 
 ----
 
-***7.4 Projection tool***
+**7.4 Projection tool**
 
+*7.4.1 Overview of the projection tool*
+
+High-dimensional genomics data often contain both biological signal and technical noise. Projection helps separate these components by transferring learned biological features from one dataset to another.
+This allows researchers to validate biological patterns across independent datasets, identify shared or distinct expression programs across tissues, species, or disease states, and visualize how strongly each dataset expresses a given pattern or cell-state signature.
+In short, projection provides a quantitative and visual way to interpret biological reproducibility and variation across studies. The Projection Tool in NeMO enables users to apply learned biological patterns from one dataset onto another, allowing comparison of gene expression dynamics across studies, cell types, or disease conditions. This approach builds on the principles of transfer learning introduced in the projectR framework (Stein-O’Brien et al., 2019), which uses dimension reduction outputs—such as PCA or NMF—to identify biologically meaningful axes that can be re-used across related datasets.
+
+*7.4.2 Projection in NeMO*
+
+Within NeMO, projection is seamlessly integrated with your existing datasets and collections:
+
+- Use the nagivation panel on the left to launch the "Projectin tool" 
+- Search for a pattern
+  - This pattern is derived from your "source" datasets
+  - This pattern could be saved unweighted gene list, weighted gene list, or weighted gene list saved from the comparison tool
+- Select collection that contains visualization panels for your "targetd dataset" or where your pattern should be projected on
+
+<img width="1273" height="668" alt="image" src="https://github.com/user-attachments/assets/8c4493b7-ada5-4011-939d-d41b4ff5ff27" />
+
+- Select an algorithm — determine how the pattern is mathematically transferred
+  - There are four different algorithm availble on NeMO, which are shown in the table below
+  - In addition to the different algorithms, there are two options availble for plotting the gene expression data
+    - Z-score normalize gene expression
+      - When enabled, this option rescales each gene’s expression values across all samples so that the gene has a mean of 0 and standard deviation of 1. This normalization helps make genes more comparable by removing baseline expression level differences. However, it can also amplify noise
+      - if the dataset contains many lowly expressed genes or dropout events, because small random variations get exaggerated after scaling.
+    - Set negative coefficient weight outputs to zero
+      - When enabled, any negative projection scores (e.g., negative pattern weights or component loadings) are set to zero during visualization.
+      - This does not alter the saved projection data—it only affects what is shown in the plot.
+      - This is useful for: making projected heatmaps or UMAPs easier to interpret when the focus is on positive pattern activation (e.g., enrichment of a biological program) and avoiding confusion from negative weights, which often represent anti-correlation rather than active expression.
+
+| Algorithm                                   | Description                                                                                                          | Typical Use Case                                                        |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| **Principal Component Analysis (PCA)**      | Projects data onto principal axes capturing the largest variance. Fast and generalizable.                            | Comparing overall gene expression trends between datasets.              |
+| **Non-negative Matrix Factorization (NMF)** | Projects based on additive, parts-based gene programs. Useful for identifying cell-type or pathway-specific modules. | Cross-dataset validation of cell-type signatures or molecular programs. |
+| **Fixed Gene Weights (from NMF re-run)**    | Applies existing NMF gene weights to a new dataset without recomputation.                                            | Efficient projection when using previously learned NMF signatures.      |
+| **Binary Gene Count (planned)**             | Uses binary membership (gene present/absent) instead of continuous weights.                                          | Interpretable comparison of curated gene sets.                          |
+
+
+- Use the "magnifier" botton to confirm the projection parameter setting and start to run the projection
+  - Each point in the resulting plot represents a cell or sample from the target dataset, colored by the strength of the projected signal
+  - If multiple patterns are present in the selected list, use different tabs to toggle between projections of different patterns
+  - Similar to the "single gene display" and the "multi-gene display" display. Users can enlarge the plots and switch between different displays from the same dataset using the "enlarge" button and "for more" botton
+ 
+  <img width="1273" height="659" alt="image" src="https://github.com/user-attachments/assets/08d68002-f0b9-4696-9131-415046d72c86" />
+
+  - Click on "View all gene list" will open sparate window of which all the genes included in the pattern with their corresponding loadings are displayed
+  
+  <img width="1285" height="651" alt="image" src="https://github.com/user-attachments/assets/dd67dcdd-b638-4aeb-b6ec-2a9e40729707" />
+
+
+### 8. Reference
+1. Shreyash Sonthalia, Ricky S. Adkins, Joshua Orvis, Guangyan Li, Xoel Mato Blanco, Alex Casella, Jinrui Liu, Genevieve Stein-O’Brien, Brian Caffo, Ronna Hertzano, Anup Mahurkar, Jesse Gillis, Jonathan Werner, Shaojie Ma, Nicola Micali, Nenad Sestan, Pasko Rakic, Gabriel Santpere, Seth A. Ament, Carlo Colantuoni.
+A Curated Compendium of Transcriptomic Data for the Exploration of Neocortical Development.
+bioRxiv (2024). doi:10.1101/2024.02.26.581612
+
+2. Gaurav Sharma, Carlo Colantuoni, Loyal A. Goff, Elana J. Fertig, Genevieve Stein-O’Brien.
+projectR: an R/Bioconductor package for transfer learning via PCA, NMF, correlation and clustering.
+Bioinformatics (2020) 36(11): 3592–3593.
+
+3. Gene Expression Analysis Resource (gEAR).
+GitHub repository. University of Maryland School of Medicine.
+https://github.com/IGS/gEAR
