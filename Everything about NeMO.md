@@ -13,14 +13,14 @@ This document introduces the NeMO (Neuroscience Multi-Omic Archive) environment 
 ### 1. Getting started with NeMO platform 
 
 #### 1.1 Set up NeMO accounts
-- Go to the homepage → click Log In (top right) → select Sign Up.
+- Go to the homepage → click the drop-down button next to "Log In" on the top right → select Sign Up.
 - Enter your basic details and email address.
 - Verify your email to activate the account.
 - Once logged in, you will have access to all the NeMO analytic tools and be able to make private/public dataset collections.
 - Manage your profile anytime by clicking your username (top right).
 - Enable colorblind-friendly mode for plots if needed.
 
-<img width="1388" height="654" alt="image" src="https://github.com/user-attachments/assets/0deee0e6-fdc4-4c0a-a5f3-43b01d4d2fb7" />
+<img width="1378" height="654" alt="image" src="https://github.com/user-attachments/assets/0deee0e6-fdc4-4c0a-a5f3-43b01d4d2fb7" />
 
 ---
 
@@ -28,7 +28,7 @@ This document introduces the NeMO (Neuroscience Multi-Omic Archive) environment 
     
 *1.2.1 Home page* 
 
-The homepage of the NeMO platform is the "My Workspace" Dashboard. At any time on the site, you can return to the homepage by clicking the NeMO icon in the top left corner. 
+The homepage of the NeMO platform is the "My Workspace" Dashboard. At any time, you can return to the homepage by clicking the NeMO icon in the top left corner. 
 
 <img width="1378" height="648" alt="image" src="https://github.com/user-attachments/assets/1695c719-5d58-41c7-8a4c-ca0a28a5e7a9" />
 
@@ -40,7 +40,7 @@ The sidebar on the left-hand side of the page is the navigation panel. This pane
 
 #### 1.3 Explore and exploit the available datasets
 
-As a comprehensive data compendium, the NeMO platform allows users not only to upload their own datasets for customized analysis but also to explore a wide range of publicly available datasets. In fact, one of the best ways to become familiar with NeMO environment is to dive into the extensive collection of datasets already hosted on the platform. This section introduces the core functions and steps for data exploration, helping new users build an understanding of the platform and practice analyzing datasets of interest without uploading their own data.
+As a comprehensive data compendium, the NeMO platform allows users not only to upload their own datasets for customized analysis but also to explore a wide range of publicly available datasets. In fact, one of the best ways to become familiar with NeMO environment is to dive into the extensive collection of datasets already deposited on the platform. This section aims to introduce the core functions and steps for data exploration, helping new users build an understanding of the platform and practice analyzing datasets of interest without uploading their own data.
 
 *1.3.1 Finding datasets*
 
@@ -49,15 +49,15 @@ To view results from a specific dataset or browse available datasets, you can cl
 <img width="1378" height="648" alt="image" src="https://github.com/user-attachments/assets/ab54a4eb-9831-4baf-a83f-e859e65c01f5" />
 
 To search for specific genes within a dataset,
-  - click the small arrow in front of the dataset title to expand the entry.
+  - Click the small arrow in front of the dataset title to expand the entry.
   - In the expanded entry, you will see a default display created by the dataset owner.
   - Click the test tube icon to open the Expression Viewer, which allows you to explore gene expression using the default display.
 
 If you prefer to create your own visualization:
   - Use the single-gene curator option from the drop-down menu under the analysis tools.
-  - Detailed instructions on building custom visualizations will be provided in a later section.
+  - Detailed instructions on building custom visualizations will be provided in "5. Curate Visualization"
 
-When you first open the Expression Viewer, a default gene will appear, but you can replace it by typing any other gene name into the search box. By default, the viewer shows one gene at a time with the "single-gene display" mode. However, after saving your own gene list in NeMO (covered in a later section), you will be able to view multiple genes using the "multi-gene display" mode and toggle between them.
+When you first open the Expression Viewer, a default gene will appear, but you can replace it by typing any other gene name into the search box. By default, the viewer shows one gene at a time with the "single-gene display" mode. However, after saving your own gene list in NeMO (covered in a later section), you will be able to view the saved list of genes  using the "multi-gene display" mode if multi-gene displays have been saved in the selected collection or dataset. 
 
 <img width="1378" height="648" alt="image" src="https://github.com/user-attachments/assets/357a677a-d075-4052-8b01-2a927b33a5ac" />
 
@@ -66,20 +66,21 @@ When you first open the Expression Viewer, a default gene will appear, but you c
 On the right side of the Expression Viewer display, there are two buttons:
   - The left button lets you zoom in on the visualization.
   - The right button opens additional tools, including the option to view or switch to other displays created by the dataset owner.
-    - Click on "Choose display" button allows you to select the new display you wish to view your gene of interest
+    - Click on the "Choose display" button allows you to select the new display you wish to view your gene of interest.
+    - Other buttons are also available for users to interact with displays and datasets using other NeMO analytic tools.  
       
-<img width="961" height="452" alt="image" src="https://github.com/user-attachments/assets/f6da7f8a-1591-4c29-af8a-ca43204261af" />
+<img width="1378" height="452" alt="image" src="https://github.com/user-attachments/assets/f6da7f8a-1591-4c29-af8a-ca43204261af" />
 
 
 ---
 
 ### 2. Retrieve datasets and metadata
-The next few sections will begin introducing how to upload your own multi-omics datasets. 
+Step 2 of the NeMO workflow is mostly conducted offline, where users can identify their own interested datasets and acquire processed gene-level expression data and exhaustive metadata information. The next few sections will begin introducing how to upload your own multi-omics datasets. Step 2 of the NeMO workflow is mostly user-dependent and conducted offline. 
 
 ---
 
 ### 3. Format standardizing and NeMO output packaging 
-`Counts.IN.SeuratDimRedNeMO.OUT.TRIM.R` and `Counts.IN.SeuratDimRedNeMO.OUT.R` are two functions we have implemented in the NeMO workflow to standardize the multi-omics datasets format and package them into `NeMOanalytics.org` compatible outputs for uploading. Details about how to use the functions can be found in `Counts.IN.SeuratDimRedNeMO.OUT.TRIM.md` and `Counts.IN.SeuratDimRedNeMO.OUT.md`. 
+`Counts.IN.SeuratDimRedNeMO.OUT.TRIM.R` is a R function we have implemented in the NeMO workflow to standardize the multi-omics datasets format and package them into `NeMOanalytics.org` compatible outputs for uploading. Details about how to use the function can be found in `Counts.IN.SeuratDimRedNeMO.OUT.TRIM.md`. 
 
 ---
 
@@ -131,7 +132,7 @@ The dataset upload process in NeMO consists of two main parts: uploading the met
 
 *4.2.5 Troubleshooting*
 
-If you encounter errors during the upload process, please submit a ticket on [the gEAR GitHub site]
+If you encounter errors during the upload process, please submit a ticket on the gEAR GitHub site
 (https://github.com/IGS/gEAR/issues). Be sure to include your dataset ID when reporting the issue.
 
 ---
@@ -151,10 +152,10 @@ Clicking on the "Curate" button will bring you to the "single-gene display" page
 
  2. Customize visualization for existing datasets
 
-- You may also access the "single-gene display" page through the navigation panel and manually search for the dataset of interest.
+-  The "single-gene display" page can also be accessed through the navigation panel on the left. When the "single-gene display" is launched, users can  manually search for the dataset of interest from the drop-down menu or type in the name of the dataset.
 <img width="1378" height="648" alt="image" src="https://github.com/user-attachments/assets/25ea897d-f1a9-4735-97dd-f4a8f6bf2ed5" />
 
-- Alternatively, in the Data management page, select the "single-gene display in the expanded entry from the "analysis tool" dropdown menu. 
+- Alternatively, in the "Dataset collection" page, select the "single-gene curator" in the expanded entry of any dataset from the "analysis tool" dropdown menu. This will also bring the user to the "single-gene display" page with the name of the selected dataset populated. 
 
 <img width="1378" height="648" alt="image" src="https://github.com/user-attachments/assets/1fdd31af-844f-4cfb-a69c-c8fe10cfceca" />
 
@@ -173,18 +174,18 @@ Multiple plot types and analysis types are available through NeMO, including lin
 
 Choose a gene for your analysis in Step 4. Note that this gene could be arbitrary for the purpose of creating displays. Saving the visualization would allow you to look up a different gene/list of genes in the "Gene Expression Search" page (see 1.3 Explore and exploit the available datasets for details). 
 
-The plot setting could be further customized by specifying the axes of the plots. The axis and color options available in the dropdown menu are related to the column names/variables in the cellMETA when running the `Counts.IN.SeuratDimRedNeMO.OUT.R function". Therefore, we recommend concatenating the complete metadata information to the cellMETA when first running the `Counts.IN.SeuratDimRedNeMO.OUT.R function` to avoid going back and forth with the uploading process.  
+The plot setting could be further customized by specifying the axes of the plots. The axis and color options available in the dropdown menu are related to the column names/variables in the cellMETA when running the `Counts.IN.SeuratDimRedNeMO.OUT.TRIM.R function`. Therefore, we recommend concatenating the complete metadata information to the cellMETA when first running the `Counts.IN.SeuratDimRedNeMO.OUT.TRIM.R function` to avoid going back and forth with the uploading process.  
 
 <img width="1378" height="298" alt="image" src="https://github.com/user-attachments/assets/13d86a28-bd6f-411e-bfcf-5ee95a8ec9ea" />
 
 Confirm the setting by clicking "Plot", which will bring you to the preview of the display, where you have more options to refine and make minor adjustments on the plot using "Dataset filters", "Plot configuration", and "Change color". Check the "Make this my default display box" if you wish it to appear as a preview on the expanded dataset list view. Confirm the change by clicking the "Save as new display" button. 
+<img width="1378" height="525" alt="image" src="https://github.com/user-attachments/assets/28d50b78-73e8-4116-822e-398a1886905f" />
 
-<img width="1378" height="452" alt="image" src="https://github.com/user-attachments/assets/e599ea89-d5c7-41ea-9514-39b59bbe8f52" />
 
 Once the display is saved, it will appear in the "single-gene display" page. To make changes to this existing display, select "Clone" under the display. After the necessary changes on the plot, confirm by selecting the "Update plot" button and choosing "Overwrite existing display instead". 
+<img width="1378" height="526" alt="image" src="https://github.com/user-attachments/assets/552473ec-125b-420e-b2ec-72cc35708c00" />
 
-<img width="1378" height="648" alt="image" src="https://github.com/user-attachments/assets/941942e0-f96c-452e-95ca-d900402fa25a" />
-
+---
 
 ### 6. Create dataset collections
 Dataset collection is one of the unique NeMO features of grouping different datasets around a shared theme. The NeMO community has been curating dataset collections that are available to the public domain, but any user can create their own dataset collection of datasets to explore.
@@ -241,28 +242,28 @@ The layout of dataset collections (how they appear when viewed in the "Gene Expr
 
 *7.1.1 Gene List Manager Overview*
 
-The Gene List Manager in NeMO allows you to create, store, and organize user-defined sets of genes. To begin creating a gene list, first open the gene list manager by clicking the "Gene List" tab in the navigation panel. The Gene List Manager follows a similar layout as the dataset explorer, where you can search for other public or private gene lists, enabling easier access and comparison across multiple analyses. Instead of retyping gene names each time, you can save them into lists, quickly reuse them in different tools, and share them with collaborators.
+The Gene List Manager in NeMO allows you to create, store, and organize user-defined sets of genes. The "Gene List Manager" follows a similar layout to the "Dataset Management", where you can search for other public or private gene lists, enabling easier access and comparison across multiple analyses. Instead of retyping gene names each time, you can save them into lists, quickly reuse them in different tools, and also share them with collaborators.
 
 <img width="1374" height="648" alt="image" src="https://github.com/user-attachments/assets/f074ed15-aa64-4c4e-924e-474c84129777" />
 
 1. Navigation & Access
-    - The Gene Lists section is found under the Manage menu on the left sidebar.
-    - From here, you can access all your lists, lists shared with you, group-affiliated lists, or public lists.
-    - Lists can also be filtered by organism (e.g., human, mouse, zebrafish) and by date added.
+- To begin creating a gene list, first open the gene list manager by clicking the "Gene List" tab in the navigation panel. 
+- From here, you can access all your lists, lists shared with you, group-affiliated lists, or public lists.
+- Lists can also be filtered by organism (e.g., human, mouse, zebrafish) and by date added.
 
 2. Views
-    - At the top of the page, you can toggle between List View, Table View, and Expanded View.
-    - These views control how gene lists are displayed, ranging from compact overviews to detailed expanded records.
-    - Lists can be sorted by metadata such as date created. This is useful for finding your most recent lists quickly.
+- At the top of the page, you can toggle between "List View", "Table View", and "Expanded View", similar to the "Dataset collection" a.
+- These views control how gene lists are displayed, ranging from compact overviews to detailed, expanded records.
+- Lists can be sorted by metadata such as date created. This is useful for finding your most recent lists quickly.
 
 3. Core Functions for Each Gene List
-Each entry in the "Gene list manager" represents a single gene list, showing its name, organism, owner, type, description, and added date. In the expanded gene list view entry, there are several action icons allow you to manage the list:
-    - Projection Tool (eye icon) → Opens the list in NeMO’s projection tool for quick comparison across studies (will be covered in later sections) 
-    - Download (down arrow icon) → Exports the list for offline use or backup.
-    - Delete (trash icon) → Permanently removes the list. 
-    - Shareable Link (link icon) → Generates a link to share the gene list with collaborators.
-    - Edit Link (pencil/edit icon) → Allows you to modify the sharing settings.
-    - Edit Metadata (page/edit icon) → Update metadata like the gene list’s description or category.
+Each entry in the "Gene list manager" represents a single gene list, showing its name, organism, owner, type, description, and added date. In the expanded gene list view entry, there are several action icons that allow you to manage the list:
+- Projection Tool (eye icon) → Opens the list in NeMO’s projection tool for quick comparison across studies (see section 7.4 Projection Tool). 
+- Download (down arrow icon) → Exports the list for offline use or backup.
+- Delete (trash icon) → Permanently removes the list. 
+- Shareable Link (link icon) → Generates a link to share the gene list with collaborators.
+- Edit Link (pencil/edit icon) → Allows you to modify the sharing settings.
+- Edit Metadata (page/edit icon) → Update metadata like the gene list’s description or category.
 
 4. Clicking on the "+ Create new gene list" will lead you to the following page to set up your new gene list.  There are two types of gene lists NeMO users can create: unweighted and weighted. This tutorial 
 There are two types of gene lists NeMO users can create: "unweighted gene list"(the most common type, just gene symbols), or "weighted gene list" (e.g., PCA loadings, differential gene statistics, etc.). We will cover how to create/upload them and use them, along with other NeMO analytic tools, in the next few sections.
@@ -286,7 +287,7 @@ Following the instructions on the "uploading gene list, the users are allowed to
     - File must contain one gene symbol per line, or genes separated by commas, spaces, or tabs.
     - No headers or numeric weights should be included.
 
-<img width="1235" height="612" alt="image" src="https://github.com/user-attachments/assets/ebb3956b-6e38-4597-8fad-b1fc009053bb" />
+<img width="1374" height="612" alt="image" src="https://github.com/user-attachments/assets/ebb3956b-6e38-4597-8fad-b1fc009053bb" />
 
 -----
 
@@ -307,7 +308,7 @@ Different from uploading the unweighted gene list file, the weighted gene list f
 | **2️gene_symbol**      | Human-readable gene name                                                                |
 | **3️numeric columns** | One or more columns of numeric weights (e.g., PCA scores, DE log₂FC, enrichment values) |
 
-<img width="1223" height="587" alt="image" src="https://github.com/user-attachments/assets/5eb86810-61a5-48f3-a86f-c30a1ac77e78" />
+<img width="1374" height="587" alt="image" src="https://github.com/user-attachments/assets/5eb86810-61a5-48f3-a86f-c30a1ac77e78" />
 
 
 ----
@@ -319,19 +320,19 @@ Different from uploading the unweighted gene list file, the weighted gene list f
 
 *7.2.1 Create multi-gene display*
 
-Similar to the single-gene viewer, we can create different visualization panels for examining different groups of genes. The Multi-gene Display Tool allows users to visualize the expression of multiple genes simultaneously across defined biological or experimental conditions.
+Similar to the single-gene viewer, we can create different visualization panels for examining different groups of genes. The "multi-gene display Tool" allows users to visualize the expression of multiple genes simultaneously across defined biological or experimental conditions.
 This function is ideal for comparing patterns of co-expression, examining pathway gene sets, or exploring marker profiles across disease, cell type, or genotype.
 
-The multi-gene curator can be lanched from the dataset management page under the analysis tool of each expanded dataset entry. Clicking on the "multi-gene curator" button will lead the user to the "multi-gene display page" and the selected dataset will be automatically populated in the "select a dataset" entry. Alternatively, multi-gene curator can be lanched using the navigation panel on the left. Using the drop down and search button under "select a dataset" entry, users can manually select their dataset of interests. 
+The multi-gene curator can be launched from the dataset management page under the analysis tool of each expanded dataset entry. Clicking on the "multi-gene curator" button will lead the user to the "multi-gene display page," and the selected dataset will be automatically populated in the "select a dataset" entry. Alternatively, the multi-gene curator can be launched using the navigation panel on the left. Using the drop-down and search button under the "select a dataset" entry, users can manually select their dataset of interest. 
 
-<img width="957" height="486" alt="image" src="https://github.com/user-attachments/assets/33fc760b-f4cb-423e-9503-577e6a758e47" />
-<img width="1081" height="563" alt="image" src="https://github.com/user-attachments/assets/78713cb8-ce4c-4915-a903-f401da328cc6" />
+<img width="1374" height="486" alt="image" src="https://github.com/user-attachments/assets/33fc760b-f4cb-423e-9503-577e6a758e47" />
+<img width="1374" height="563" alt="image" src="https://github.com/user-attachments/assets/78713cb8-ce4c-4915-a903-f401da328cc6" />
 
-Follow the prompt 2-5 in the " multi-gene display" page to customize the visualization for viewing multiple genes:
+Follow the prompts 2-5 in the " multi-gene display" page to customize the visualization for viewing multiple genes:
 - Create or load an existing display
   - Click + Curate new display to start a new visualization, or select a saved display from your existing list
   - You can also Clone or Set as Default any previously created display for reuse
-- Select plot type and analysis: these defines how the gene expression data will be displayed and aggregated 
+- Select plot type and analysis: these define how the gene expression data will be displayed and aggregated 
     - Add the genes you wish to visualize
     - Enter gene names manually into the search box, or use Quick search using Gene Lists to import a saved list.
     - As you type, the system will auto-suggest matching genes present in the dataset.
@@ -344,41 +345,41 @@ Follow the prompt 2-5 in the " multi-gene display" page to customize the visuali
 
 Clicking on the "plot" button will lead the user to the preview section, where plotting parameters can be further adjusted using the options listed on the left configuration panel. This page allows you to fine-tune the visualization and save it as a curated display. Once users are satisfied with the visualization, they can save the display and download it to their own device. 
 
-<img width="939" height="533" alt="image" src="https://github.com/user-attachments/assets/70dc2e1b-6992-45c4-8999-0ed0f20322d7" />
+<img width="1374" height="533" alt="image" src="https://github.com/user-attachments/assets/70dc2e1b-6992-45c4-8999-0ed0f20322d7" />
 
 ----
 
 *7.2.2 Add the multi-gene display to a collection* 
 
-As discussed in "6. Create dataset collections",  single-gene display can be added to curated collection for cross-dataset comparison. Multi-gene displays can also be added and arranged in the existing collection or new collection in the same way. To do so, first navigating back to the "dataset management page. 
+As discussed in "6. Create dataset collections",  "single-gene display" can be added to a curated collection for cross-dataset comparison. Multi-gene displays can also be added and arranged in the existing collection or new collection in the same way. To do so, first navigate back to the "dataset management page". 
 
 - Under Collection management, use the dropdown to:
     - Select an existing collection, or
     - Click + Create a new collection, then give it a name
-    - Optionally, check Private collection if you don’t want it shared publicly.
+    - Optionally, check the "Private collection" if you don’t want it shared publicly.
 
-<img width="1242" height="711" alt="image" src="https://github.com/user-attachments/assets/e7277f4d-f2ee-4eec-b53f-b79463d02938" />
+<img width="1374" height="711" alt="image" src="https://github.com/user-attachments/assets/e7277f4d-f2ee-4eec-b53f-b79463d02938" />
 
 - Add the dataset containing your multi-gene display
     - Scroll through the dataset list (or use the keyword search/filter panel) to find the target dataset
     - Expand the dataset entry and use the "+/-" button to add or remove the display from the collection
-<img width="1202" height="706" alt="image" src="https://github.com/user-attachments/assets/173b926f-989b-45d5-9e36-73630d030a3d" />
+<img width="1374" height="706" alt="image" src="https://github.com/user-attachments/assets/173b926f-989b-45d5-9e36-73630d030a3d" />
 
 
-- Clicking on the "+/-" button will pop up a preview window to allow you add or remove displays for this specific dataset
-<img width="1232" height="326" alt="image" src="https://github.com/user-attachments/assets/6753c823-99bd-40a9-921c-3d5d0ce2cc9d" />
+- Clicking on the "+/-" button will pop up a preview window to allow you to add or remove displays for this specific dataset
+<img width="1374" height="326" alt="image" src="https://github.com/user-attachments/assets/6753c823-99bd-40a9-921c-3d5d0ce2cc9d" />
 
 ----
 
 *7.2.3 View expression of genes saved in the weighted/unweighted genes*
 
-Once displays are added in the collection, the multi-gene viewer function for this collection will be activated in the "Gene Expression" page. Go to the "Gene Expression" tab using the navigation panel on the left. 
+Once displays are added to the collection, the multi-gene viewer function for this collection will be activated in the "Gene Expression" page. Go to the "Gene Expression" tab using the navigation panel on the left. 
 
-- Select the collection that you added your multi-gene display using the drop-down menu
-- Type in the names of the genes or use the drop-down menu to select saved gene list
+- Select the collection that you added your multi-gene display to using the drop-down menu
+- Type in the names of the genes or use the drop-down menu to select a saved gene list
   - Click to confirm the genes from the list
   - Confirm the query by clicking on proceed
-- Run the query by clicking on the "magnifier" button from the top
+- Run the query by clicking on the "magnifier" button at the top
 
 <img width="1239" height="615" alt="image" src="https://github.com/user-attachments/assets/050e5897-d67c-4e59-afe5-fc7bb0359eb3" />
 
@@ -393,10 +394,10 @@ There are two different ways to navigate to the comparison tool page:
 
 1. To launch the comparison tool from the dataset collection page
    - Expand the dataset entry and click on the analysis tool. Use the drop-down menu to select the comparison tool. This will bring you to the comparison tool main page, and the selected dataset will be automatically populated on the comparison page.
-   <img width="1134" height="565" alt="image" src="https://github.com/user-attachments/assets/00c236d5-8cf5-4fff-89ed-05f3545a0c73" />
+   <img width="1374" height="565" alt="image" src="https://github.com/user-attachments/assets/00c236d5-8cf5-4fff-89ed-05f3545a0c73" />
 
-2. Use the navigation panel and choose the dataset manually. Once selected, a green checkmark will confirm your dataset is loaded and ready for comparison.
-   <img width="1133" height="533" alt="image" src="https://github.com/user-attachments/assets/fb6773a8-9dcb-4eb5-afab-e23935698da4" />
+2. Use the navigation panel and choose the dataset manually from the drop-down menu. Once selected, a green checkmark will confirm your dataset is loaded and ready for comparison.
+   <img width="1374" height="533" alt="image" src="https://github.com/user-attachments/assets/fb6773a8-9dcb-4eb5-afab-e23935698da4" />
 
 ----
 
@@ -407,7 +408,7 @@ There are two different ways to navigate to the comparison tool page:
     - X-axis (query condition): select the condition to plot on the X-axis (e.g., AD).
     - Y-axis (reference condition): select the comparison or control group to plot on the Y-axis (e.g., Control).
     - You can include or exclude specific groups from the dropdown and toggle menus as needed. The number of observations (cells, nuclei, or samples) included in the comparison will appear below the selection fields.
-<img width="1186" height="651" alt="image" src="https://github.com/user-attachments/assets/e6136dbf-7476-4123-b304-6b062c433050" />
+<img width="1374" height="651" alt="image" src="https://github.com/user-attachments/assets/e6136dbf-7476-4123-b304-6b062c433050" />
 
  - Comparison parameter: to refine your analysis with statistical testing and filtering options. Click the Edit Parameters button at any time to revisit or adjust these settings.
 
@@ -420,7 +421,7 @@ There are two different ways to navigate to the comparison tool page:
       - Report output as: Choose whether expression values should be reported as linear or log2.
       - Fold Change Cutoff (≥N): Set a threshold for the minimum fold change to display (default: 2.0). Genes below this cutoff are omitted from the plot for performance efficiency.
       - Deviation Filter: Optionally filter genes based on variability across samples (default: No filter).
-<img width="1130" height="300" alt="image" src="https://github.com/user-attachments/assets/a61bf275-195a-488f-9151-5c924406b3e3" />
+<img width="1374" height="300" alt="image" src="https://github.com/user-attachments/assets/a61bf275-195a-488f-9151-5c924406b3e3" />
 
 ----
 
@@ -434,7 +435,7 @@ There are two different ways to navigate to the comparison tool page:
     - Genes along the diagonal are similarly expressed in both conditions.
     - Genes deviating from the diagonal indicate differential expression.
     - Red points indicate genes passing the defined cutoffs (fold-change and/or significance), while gray points do not.
-<img width="1111" height="572" alt="image" src="https://github.com/user-attachments/assets/1ebf6dcb-a717-4e40-ac29-6a06b2de0730" />
+<img width="1374" height="572" alt="image" src="https://github.com/user-attachments/assets/1ebf6dcb-a717-4e40-ac29-6a06b2de0730" />
 
  ----
  
@@ -468,23 +469,23 @@ Once the plots are generated, users can interact with the plots for better visua
 
 High-dimensional genomics data often contain both biological signal and technical noise. Projection helps separate these components by transferring learned biological features from one dataset to another.
 This allows researchers to validate biological patterns across independent datasets, identify shared or distinct expression programs across tissues, species, or disease states, and visualize how strongly each dataset expresses a given pattern or cell-state signature.
-In short, projection provides a quantitative and visual way to interpret biological reproducibility and variation across studies. The Projection Tool in NeMO enables users to apply learned biological patterns from one dataset onto another, allowing comparison of gene expression dynamics across studies, cell types, or disease conditions. This approach builds on the principles of transfer learning introduced in the projectR framework (Stein-O’Brien et al., 2019), which uses dimension reduction outputs—such as PCA or NMF—to identify biologically meaningful axes that can be re-used across related datasets.
+In short, projection provides a quantitative and visual way to interpret biological reproducibility and variation across studies. The Projection Tool in NeMO enables users to apply learned biological patterns from one dataset onto another, allowing comparison of gene expression dynamics across studies, cell types, or disease conditions. This approach builds on the principles of transfer learning introduced in the projectR framework (Stein-O’Brien et al., 2019), which uses dimension reduction outputs—such as PCA or NMF—to identify biologically meaningful axes that can be reused across related datasets.
 
 *7.4.2 Projection in NeMO*
 
 Within NeMO, projection is seamlessly integrated with your existing datasets and collections:
 
-- Use the nagivation panel on the left to launch the "Projectin tool" 
+- Use the navigation panel on the left to launch the "Projection tool" 
 - Search for a pattern
   - This pattern is derived from your "source" datasets
-  - This pattern could be saved unweighted gene list, weighted gene list, or weighted gene list saved from the comparison tool
-- Select collection that contains visualization panels for your "targetd dataset" or where your pattern should be projected on
+  - This pattern could be saved unweighted gene list, a weighted gene list, or a weighted gene list saved from the comparison tool
+- Select a collection that contains visualization panels for your "target dataset" or where your pattern should be projected on
 
-<img width="1273" height="668" alt="image" src="https://github.com/user-attachments/assets/8c4493b7-ada5-4011-939d-d41b4ff5ff27" />
+<img width="1374" height="668" alt="image" src="https://github.com/user-attachments/assets/8c4493b7-ada5-4011-939d-d41b4ff5ff27" />
 
 - Select an algorithm — determine how the pattern is mathematically transferred
-  - There are four different algorithm availble on NeMO, which are shown in the table below
-  - In addition to the different algorithms, there are two options availble for plotting the gene expression data
+  - There are four different algorithms available on NeMO, which are shown in the table below
+  - In addition to the different algorithms, there are two options available for plotting the gene expression data
     - Z-score normalize gene expression
       - When enabled, this option rescales each gene’s expression values across all samples so that the gene has a mean of 0 and standard deviation of 1. This normalization helps make genes more comparable by removing baseline expression level differences. However, it can also amplify noise
       - if the dataset contains many lowly expressed genes or dropout events, because small random variations get exaggerated after scaling.
@@ -495,22 +496,22 @@ Within NeMO, projection is seamlessly integrated with your existing datasets and
 
 | Algorithm                                   | Description                                                                                                          | Typical Use Case                                                        |
 | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| **Principal Component Analysis (PCA)**      | Projects data onto principal axes capturing the largest variance. Fast and generalizable.                            | Comparing overall gene expression trends between datasets.              |
+| **Principal Component Analysis (PCA)**      | Projects data onto principal axes, capturing the largest variance. Fast and generalizable.                            | Comparing overall gene expression trends between datasets.              |
 | **Non-negative Matrix Factorization (NMF)** | Projects based on additive, parts-based gene programs. Useful for identifying cell-type or pathway-specific modules. | Cross-dataset validation of cell-type signatures or molecular programs. |
 | **Fixed Gene Weights (from NMF re-run)**    | Applies existing NMF gene weights to a new dataset without recomputation.                                            | Efficient projection when using previously learned NMF signatures.      |
 | **Binary Gene Count (planned)**             | Uses binary membership (gene present/absent) instead of continuous weights.                                          | Interpretable comparison of curated gene sets.                          |
 
 
-- Use the "magnifier" botton to confirm the projection parameter setting and start to run the projection
+- Use the "magnifier" button to confirm the projection parameter setting and start to run the projection
   - Each point in the resulting plot represents a cell or sample from the target dataset, colored by the strength of the projected signal
   - If multiple patterns are present in the selected list, use different tabs to toggle between projections of different patterns
-  - Similar to the "single gene display" and the "multi-gene display" display. Users can enlarge the plots and switch between different displays from the same dataset using the "enlarge" button and "for more" botton
+  - Similar to the "single gene display" and the "multi-gene display" display. Users can enlarge the plots and switch between different displays from the same dataset using the "enlarge" button and the "for more" button
  
-  <img width="1273" height="659" alt="image" src="https://github.com/user-attachments/assets/08d68002-f0b9-4696-9131-415046d72c86" />
+  <img width="1374 height="659" alt="image" src="https://github.com/user-attachments/assets/08d68002-f0b9-4696-9131-415046d72c86" />
 
-  - Click on "View all gene list" will open sparate window of which all the genes included in the pattern with their corresponding loadings are displayed
+  - Clicking on "View all gene list" will open a separate window in which all the genes included in the pattern, with their corresponding loadings, are displayed
   
-  <img width="1285" height="651" alt="image" src="https://github.com/user-attachments/assets/dd67dcdd-b638-4aeb-b6ec-2a9e40729707" />
+  <img width="1374" height="651" alt="image" src="https://github.com/user-attachments/assets/dd67dcdd-b638-4aeb-b6ec-2a9e40729707" />
 
 ----
 
