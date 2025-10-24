@@ -477,15 +477,16 @@ Within NeMO, projection is seamlessly integrated with your existing datasets and
 
 - Use the navigation panel on the left to launch the "Projection tool" 
 - Search for a pattern
-  - This pattern is derived from your "source" datasets
-  - This pattern could be saved unweighted gene list, a weighted gene list, or a weighted gene list saved from the comparison tool
-- Select a collection that contains visualization panels for your "target dataset" or where your pattern should be projected on
+  - This pattern is derived from your "source" datasets.
+  - This pattern could be saved unweighted gene list, a weighted gene list, or a weighted gene list saved from the comparison tool from your own collection of gene lists.
+  - Alternatively, users can type the name of the gene list saved in the public domain of the NeMO gene list.
+- Select a collection that contains visualization panels for your "target dataset" or where your pattern should be projected.
 
 <img width="1374" height="668" alt="image" src="https://github.com/user-attachments/assets/8c4493b7-ada5-4011-939d-d41b4ff5ff27" />
 
 - Select an algorithm — determine how the pattern is mathematically transferred
-  - There are four different algorithms available on NeMO, which are shown in the table below
-  - In addition to the different algorithms, there are two options available for plotting the gene expression data
+  - There are four different algorithms available on NeMO, which are shown in the table below.
+  - In addition to the different algorithms, there are two options available for plotting the gene expression data.
     - Z-score normalize gene expression
       - When enabled, this option rescales each gene’s expression values across all samples so that the gene has a mean of 0 and standard deviation of 1. This normalization helps make genes more comparable by removing baseline expression level differences. However, it can also amplify noise
       - if the dataset contains many lowly expressed genes or dropout events, because small random variations get exaggerated after scaling.
@@ -503,15 +504,14 @@ Within NeMO, projection is seamlessly integrated with your existing datasets and
 
 
 - Use the "magnifier" button to confirm the projection parameter setting and start to run the projection
-  - Each point in the resulting plot represents a cell or sample from the target dataset, colored by the strength of the projected signal
-  - If multiple patterns are present in the selected list, use different tabs to toggle between projections of different patterns
-  - Similar to the "single gene display" and the "multi-gene display" display. Users can enlarge the plots and switch between different displays from the same dataset using the "enlarge" button and the "for more" button
+  - Each point in the resulting plot represents a cell or sample from the target dataset, colored by the strength of the projected signal.
+  - If multiple patterns are present in the selected list, use different tabs to toggle between projections of different patterns.
+  - Similar to the "single gene display" and the "multi-gene display" display. Users can enlarge the plots and switch between different displays from the same dataset using the "enlarge" button and the "for more" button.
+<img width="1374" height="645" alt="image" src="https://github.com/user-attachments/assets/7baecdce-bbe7-4f5a-9654-ba1ac41051be" />
  
-  <img width="1374 height="659" alt="image" src="https://github.com/user-attachments/assets/08d68002-f0b9-4696-9131-415046d72c86" />
-
   - Clicking on "View all gene list" will open a separate window in which all the genes included in the pattern, with their corresponding loadings, are displayed
-  
-  <img width="1374" height="651" alt="image" src="https://github.com/user-attachments/assets/dd67dcdd-b638-4aeb-b6ec-2a9e40729707" />
+<img width="1374" height="645" alt="image" src="https://github.com/user-attachments/assets/3d579173-47e4-4637-8c1f-68703817c7c5" />
+ 
 
 ----
 
