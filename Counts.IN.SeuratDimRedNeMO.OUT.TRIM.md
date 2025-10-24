@@ -1,6 +1,6 @@
 # Standardize and reformat the Multi-Omics data using NeMO Function
 
-  This document explains how to prepare inputs and run the **NeMO.TRIM function** (`Counts.IN.SeuratDimRedNeMO.OUT.TRIM.R`). The output of the (`Counts.IN.SeuratDimRedNeMO.OUT.TRIM.R`and `Counts.IN.SeuratDimRedNeMO.OUT.R`)
+  This document explains how to prepare inputs and run the **NeMO.TRIM function** (`Counts.IN.SeuratDimRedNeMO.OUT.TRIM.R`). The output of the (`Counts.IN.SeuratDimRedNeMO.OUT.TRIM.R`)
   can then be directly uploaded onto (`NeMOanalytics.org`)
 
 ---
@@ -21,10 +21,10 @@ library(SJD)
 ### 2.1 Expression matrix
 The expression matrix stores the processed count data, formatted as genes × cells/samples (i.e., rows represent gene names, columns represent sample or cell identifiers).
 
-Unlike the `Counts.IN.SeuratDimRedNeMO.OUT.R function`, the `Counts.IN.SeuratDimRedNeMO.OUT.TRIM.R` function does not include a built-in normalization argument for raw datasets. Therefore, it is essential to ensure that your dataset has already been fully processed  before extracting and providing the expression matrix as input.
+Unlike the `Counts.IN.SeuratDimRedNeMO.OUT.R function`, the `Counts.IN.SeuratDimRedNeMO.OUT.TRIM.R` function does not include a built-in normalization argument for raw datasets. Therefore, it is essential to ensure that your dataset has already been fully processed before extracting and providing the expression matrix as input.
 
 Here, we demonstrate two commonly encountered examples for scRNA-seq and BulkRNA-seq, respectively. 
-- scRNA-seq: If your dataset has been processed in Seurat and saved as a Seurat object, the normalized count matrix stored in the assay’s "data" slot is already formatted as genes × cells.
+- scRNA-seq: If your dataset has been processed in Seurat and saved as a Seurat object, the normalized count matrix stored in the assay’s "data" slot is already formatted as genes × cells (depending on what version of Seurat you used).
 - Bulk RNA-seq: Processed bulk RNA-seq data are typically stored as genes × samples. As long as the dataset has been properly normalized, it can be used directly as the expression matrix input.
 
 ```r
